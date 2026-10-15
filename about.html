@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="About Uddah - Daily tool and equipment rental">
+    <meta name="keywords" content="Uddah, about us, tool rental">
+    <title>Uddah - About Us</title>
+
+    <!-- main css file, same one for all pages -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- header: same on every page. the whole logo is an image map that opens this About page -->
+    <header class="site-header">
+        <img src="images/logo.png" alt="Uddah logo"
+             width="250" height="150" usemap="#uddah-map">
+
+        <map name="uddah-map">
+            <area shape="rect" coords="0,0,250,150"
+                  href="about.html" alt="About Uddah">
+        </map>
+    </header>
+
+    <!-- menu: same on every page. "More" opens a drop-down with Contact, Feedback and Policy -->
+    <nav class="main-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+            <li>
+                <a href="#">More &#9662;</a>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="policy.html">Policy</a></li>
+                </ul>
+            </li>
+
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <!-- page content starts here -->
+    <section id="content" class="content">
+
+        <!-- short intro about the project idea -->
+        <article id="who">
+            <header>
+                <h2>About Uddah</h2>
+            </header>
+            <p>
+                Uddah is a student project that offers a simple idea: rent the tool
+                you need by the day instead of buying it. Our goal is to help people
+                finish their home jobs easily while saving money and space.
+            </p>
+        </article>
+
+        <!-- links that jump to the sections below (they use the section id) -->
+        <p>
+            Jump to:
+            <a href="#vision">Vision &amp; Mission</a> |
+            <a href="#values">Our Values</a>
+        </p>
+
+        <section id="vision">
+            <h3>Our Vision</h3>
+            <p>To make useful tools available to everyone, whenever they need them.</p>
+
+            <h3>Our Mission</h3>
+            <p>
+                To provide quality, checked tools at a fair daily price, with clear
+                rental terms and friendly service.
+            </p>
+        </section>
+
+        <section id="values">
+            <h3>Our Values</h3>
+            <ul>
+                <li><strong>Saving:</strong> pay only for what you use.</li>
+                <li><strong>Quality:</strong> every tool is checked before each rental.</li>
+                <li><strong>Trust:</strong> clear terms explained in our
+                    <a href="policy.html">rental policy</a>.</li>
+                <li><strong>Sustainability:</strong> sharing tools means less waste.</li>
+            </ul>
+        </section>
+
+        <!-- btn is the same class we used for the form buttons, here it's on a link -->
+        <p>Have a question? <a href="contact.html" class="btn">Contact Us</a></p>
+
+        <p><a href="#content">Back to top</a></p>
+    </section>
+
+    <!-- footer: same on every page -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Uddah. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

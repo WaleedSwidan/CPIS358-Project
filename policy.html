@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Uddah rental policy and terms">
+    <meta name="keywords" content="Uddah, rental policy, terms, deposit">
+    <title>Uddah - Policy</title>
+
+    <!-- main css file, same one for all pages -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- internal css: only for this page. we put it after the main css link so it can override it -->
+    <style type="text/css">
+        /* orange titles for the policy sections */
+        .policy-section h3 {
+            color: #e8711a;
+        }
+
+        /* light orange box with dashed border for the note */
+        .policy-note {
+            background-color: #fde3cf;
+            border: 2px dashed #e8711a;
+            border-radius: 8px;
+            padding: 10px;
+            width: 70%;
+        }
+
+        /* the FAQ questions */
+        summary {
+            font-weight: bold;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header: same on every page. the whole logo is an image map that opens the About page -->
+    <header class="site-header">
+        <img src="images/logo.png" alt="Uddah logo"
+             width="250" height="150" usemap="#uddah-map">
+
+        <map name="uddah-map">
+            <area shape="rect" coords="0,0,250,150"
+                  href="about.html" alt="About Uddah">
+        </map>
+    </header>
+
+    <!-- menu: same on every page. "More" opens a drop-down with Contact, Feedback and Policy -->
+    <nav class="main-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+            <li>
+                <a href="#">More &#9662;</a>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="policy.html">Policy</a></li>
+                </ul>
+            </li>
+
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <!-- page content starts here. the "rental terms" link in sign up opens this page -->
+    <section id="content" class="content">
+        <h2>Rental Policy</h2>
+        <p>Please read our rental terms before renting any equipment from Uddah.</p>
+
+        <!-- links that jump to the sections below (they use the section id) -->
+        <p>
+            Jump to:
+            <a href="#rental-period">Rental Period</a> |
+            <a href="#deposit">Deposit</a> |
+            <a href="#late-return">Late Return</a> |
+            <a href="#damage">Damage</a> |
+            <a href="#faq">FAQ</a>
+        </p>
+
+        <section id="rental-period" class="policy-section">
+            <h3>1. Rental Period</h3>
+            <ol>
+                <li>Equipment is rented by the day (24 hours).</li>
+                <li>The rental day starts when you receive the equipment.</li>
+                <li>You can extend the rental by contacting us before the end of the day.</li>
+            </ol>
+        </section>
+
+        <!-- list inside a list (nested) for the parts that must be returned -->
+        <section id="deposit" class="policy-section">
+            <h3>2. Deposit</h3>
+            <p>A refundable deposit is required for every rental. The deposit is returned when:</p>
+            <ul>
+                <li>The equipment is returned on time.</li>
+                <li>The equipment is returned clean and in good condition.</li>
+                <li>All parts and accessories are included:
+                    <ul>
+                        <li>Batteries and chargers</li>
+                        <li>Drill bits and attachments</li>
+                        <li>Carrying cases</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!-- same table style as the price list in products (price-table class) -->
+        <section id="late-return" class="policy-section">
+            <h3>3. Late Return</h3>
+
+            <table class="price-table">
+                <caption>Late return fees</caption>
+                <thead>
+                    <tr>
+                        <th>Delay</th>
+                        <th>Fee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Up to 3 hours</td>
+                        <td>No fee</td>
+                    </tr>
+                    <tr>
+                        <td>3 to 24 hours</td>
+                        <td>One extra rental day</td>
+                    </tr>
+                    <tr>
+                        <td>More than 24 hours</td>
+                        <td>One extra day for each day of delay</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="damage" class="policy-section">
+            <h3>4. Damage and Loss</h3>
+            <p>
+                The renter is responsible for the equipment during the rental period.
+                Repair or replacement costs may be deducted from the deposit.
+            </p>
+
+            <!-- policy-note style is in the internal css at the top -->
+            <p class="policy-note">
+                <strong>Note:</strong> Please report any problem with the equipment
+                as soon as you receive it.
+            </p>
+        </section>
+
+        <!-- FAQ: details + summary, click the question and the answer opens -->
+        <section id="faq" class="policy-section">
+            <h3>5. Frequently Asked Questions</h3>
+
+            <details>
+                <summary>Can I cancel my rental?</summary>
+                <p>Yes, you can cancel for free before receiving the equipment.</p>
+            </details>
+
+            <details>
+                <summary>Do I need an account to rent?</summary>
+                <p>Yes, please <a href="signup.html">create an account</a> first.</p>
+            </details>
+
+            <details>
+                <summary>How do I contact Uddah?</summary>
+                <p>Visit our <a href="contact.html">Contact Us</a> page.</p>
+            </details>
+        </section>
+
+        <p><a href="#content">Back to top</a></p>
+    </section>
+
+    <!-- footer: same on every page -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Uddah. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

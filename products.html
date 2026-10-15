@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Uddah - Rent tools and equipment by the day">
+    <meta name="keywords" content="Uddah, tool rental, drill rental, ladder rental">
+    <title>Uddah - Products</title>
+
+    <!-- main css file, same one for all pages -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- header: same on every page. the whole logo is an image map that opens the About page -->
+    <header class="site-header">
+        <img src="images/logo.png" alt="Uddah logo" width="250" height="150" usemap="#uddah-map">
+
+        <map name="uddah-map">
+            <area shape="rect" coords="0,0,250,150" href="about.html" alt="About Uddah">
+        </map>
+    </header>
+
+    <!-- menu: same on every page. "More" opens a drop-down with Contact, Feedback and Policy -->
+    <nav class="main-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+            <li>
+                <a href="#">More &#9662;</a>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="policy.html">Policy</a></li>
+                </ul>
+            </li>
+
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <!-- page content starts here -->
+    <section id="content" class="content">
+        <h2>Our Equipment</h2>
+        <p>Why buy a tool you will use once? Rent it from Uddah by the day.</p>
+
+        <!-- links that jump to each category (they use the section id) -->
+        <p>
+            Jump to:
+            <a href="#power-tools">Power Tools</a> |
+            <a href="#hand-tools">Hand Tools</a> |
+            <a href="#ladders">Ladders &amp; Access</a> |
+            <a href="#prices">Price List</a>
+        </p>
+
+        <!-- each category is a section, each product is a card (product-card) -->
+        <section id="power-tools">
+            <h3>Power Tools</h3>
+
+            <div class="product-card">
+                <!-- the badge sits on top of the image (z-index 2 on badge, z-index 1 on image) -->
+                <div class="product-image">
+                    <img src="images/impact-drill.jpeg" alt="Cordless impact drill kit" width="150" height="150">
+                    <span class="badge">Available Today</span>
+                </div>
+                <h4>Cordless Impact Drill Kit</h4>
+                <p>For screws, installing shelves and drilling wood or light walls.</p>
+                <p class="price">30 SAR / day</p>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/rotary-hammer.jpeg" alt="Rotary hammer drill" width="150" height="150">
+                    <span class="badge">Available Today</span>
+                </div>
+                <h4>Rotary Hammer Drill</h4>
+                <p>Heavy-duty drilling into concrete, brick and stone.</p>
+                <p class="price">60 SAR / day</p>
+            </div>
+        </section>
+
+        <section id="hand-tools">
+            <h3>Hand Tools</h3>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <!-- this image is tall (3:4), that's why the width is 112 not 150 -->
+                    <img src="images/tool-set.jpeg" alt="Mechanic and handyman tool set" width="112" height="150">
+                    <span class="badge">Most Rented</span>
+                </div>
+                <h4>Mechanic &amp; Handyman Tool Set</h4>
+                <p>Everything you need for quick home and car repairs.</p>
+                <p class="price">20 SAR / day</p>
+            </div>
+        </section>
+
+        <section id="ladders">
+            <h3>Ladders &amp; Access</h3>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <!-- also a tall image (2:3), width 100 so it doesn't look stretched -->
+                    <img src="images/ladder.jpeg" alt="Aluminum step ladder" width="100" height="150">
+                    <span class="badge">Available Today</span>
+                </div>
+                <h4>Aluminum Step Ladder</h4>
+                <p>Reach high ceilings and walls, then return it, no storage needed.</p>
+                <p class="price">40 SAR / day</p>
+            </div>
+        </section>
+
+        <!-- price table. if you add a new product, add it here too -->
+        <section id="prices">
+            <h3>Price List</h3>
+
+            <table class="price-table">
+                <caption>Daily rental prices (SAR)</caption>
+
+                <thead>
+                    <tr>
+                        <th>Equipment</th>
+                        <th>Category</th>
+                        <th>Price / Day</th>
+                        <th>Deposit</th>
+                    </tr>
+                </thead>
+
+                <!-- tfoot is written before tbody but it shows at the bottom of the table -->
+                <tfoot>
+                    <tr>
+                        <td colspan="4">The deposit is refunded when the equipment is returned in good condition.</td>
+                    </tr>
+                </tfoot>
+
+                <tbody>
+                    <tr>
+                        <td>Cordless Impact Drill Kit</td>
+                        <td>Power Tools</td>
+                        <td>30</td>
+                        <td>150</td>
+                    </tr>
+                    <tr>
+                        <td>Rotary Hammer Drill</td>
+                        <td>Power Tools</td>
+                        <td>60</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <td>Mechanic &amp; Handyman Tool Set</td>
+                        <td>Hand Tools</td>
+                        <td>20</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>Aluminum Step Ladder</td>
+                        <td>Ladders &amp; Access</td>
+                        <td>40</td>
+                        <td>200</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <p><a href="#content">Back to top</a></p>
+    </section>
+
+    <!-- footer: same on every page -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Uddah. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
