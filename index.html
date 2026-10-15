@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- utf-8 so arabic text shows correctly -->
+    <meta charset="UTF-8">
+
+    <meta name="description" content="Uddah - Rent tools and equipment by the day">
+    <meta name="keywords" content="Uddah, tool rental, equipment rental, daily rent">
+
+    <!-- title format for all pages: Uddah - page name -->
+    <title>Uddah - Home</title>
+
+    <!-- main css file, same one for all pages -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- header: same on every page. the whole logo is an image map that opens the About page -->
+    <header class="site-header">
+        <img src="images/logo.png" alt="Uddah - Daily tool rental"
+             width="250" height="150" usemap="#uddah-map">
+
+        <map name="uddah-map">
+            <area shape="rect" coords="0,0,250,150" href="about.html" alt="About Uddah">
+        </map>
+    </header>
+
+    <!-- menu: same on every page. "More" opens a drop-down with Contact, Feedback and Policy -->
+    <nav class="main-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+            <li>
+                <a href="#">More &#9662;</a>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="policy.html">Policy</a></li>
+                </ul>
+            </li>
+
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <!-- page content starts here -->
+    <section id="content" class="content">
+
+        <!-- intro: explains the idea of Uddah -->
+        <article id="intro">
+            <header>
+                <h2>Welcome to Uddah</h2>
+            </header>
+            <p>
+                Uddah is a daily tool and equipment rental website. Instead of buying
+                an expensive tool that you will only use once or twice, you can rent it
+                from Uddah for the days you need and return it when you finish.
+            </p>
+
+            <!-- btn here is on a link, we also use it on the form buttons -->
+            <p><a href="products.html" class="btn">Browse Products</a></p>
+        </article>
+
+        <!-- links that jump to the sections below (they use the section id) -->
+        <p>
+            Jump to:
+            <a href="#problem">The Problem</a> |
+            <a href="#solution">Our Solution</a> |
+            <a href="#how">How It Works</a> |
+            <a href="#why">Why Uddah</a>
+        </p>
+
+        <section id="problem">
+            <h3>The Problem</h3>
+            <p>
+                Many people need a tool for a small job, such as installing a shelf or
+                fixing something at home. Buying a new tool costs a lot of money, takes
+                space to store, and is rarely used again.
+            </p>
+        </section>
+
+        <section id="solution">
+            <h3>Our Solution</h3>
+            <p>
+                Uddah lets you rent the tool you need by the day, at a low price.
+                You save money and storage space, and you always get a tool that is
+                checked and ready to use.
+            </p>
+
+            <!-- figure = image with a caption under it -->
+            <figure>
+                <img src="images/impact-drill.jpeg" alt="Cordless impact drill"
+                     width="150" height="150">
+                <figcaption><em>Rent a cordless drill for only 30 SAR per day.</em></figcaption>
+            </figure>
+        </section>
+
+        <!-- rental steps as a numbered list -->
+        <section id="how">
+            <h3>How It Works</h3>
+            <ol>
+                <li><a href="signup.html">Create an account</a> on Uddah.</li>
+                <li>Choose the tool you need from our <a href="products.html">products</a>.</li>
+                <li>Pick up the tool and use it for the days you need.</li>
+                <li>Return the tool and get your deposit back.</li>
+            </ol>
+        </section>
+
+        <section id="why">
+            <h3>Why Uddah?</h3>
+            <ul>
+                <li><strong>Save money:</strong> pay only for the days you use.</li>
+                <li><strong>No storage:</strong> no need to keep big tools at home.</li>
+                <li><strong>Quality tools:</strong> every tool is checked before rental.</li>
+                <li><strong>Clear terms:</strong> read our <a href="policy.html">rental policy</a>.</li>
+            </ul>
+        </section>
+
+        <!-- aside: small extra info, not part of the main content -->
+        <aside>
+            <p><strong>Did you know?</strong> Most home tools are used only a few times a year.</p>
+        </aside>
+
+        <p><a href="#content">Back to top</a></p>
+    </section>
+
+    <!-- footer: same on every page -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Uddah. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

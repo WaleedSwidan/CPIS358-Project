@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- utf-8 so arabic text shows correctly -->
+    <meta charset="UTF-8">
+
+    <meta name="description" content="Uddah - Rent tools and equipment by the day">
+    <meta name="keywords" content="Uddah, tool rental, equipment rental, daily rent">
+
+    <title>Uddah - Sign Up</title>
+
+    <!-- main css file, same one for all pages -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- header: same on every page. the whole logo is an image map that opens the About page -->
+    <header class="site-header">
+        <img src="images/logo.png" alt="Uddah - Daily tool rental"
+             width="250" height="150" usemap="#uddah-map">
+
+        <map name="uddah-map">
+            <area shape="rect" coords="0,0,250,150"
+                  href="about.html" alt="About Uddah">
+        </map>
+    </header>
+
+    <!-- menu: same on every page. "More" opens a drop-down with Contact, Feedback and Policy -->
+    <nav class="main-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+            <li>
+                <a href="#">More &#9662;</a>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="policy.html">Policy</a></li>
+                </ul>
+            </li>
+
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <!-- page content starts here -->
+    <section id="content" class="content">
+        <h2>Create an Account</h2>
+        <p>Join Uddah and rent tools by the day instead of buying them.</p>
+
+        <!-- sign up form. form-box gives it the white card style (same as the other forms) -->
+        <form method="post" action="#" class="form-box">
+
+            <p>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname"
+                       size="30" maxlength="50" required autofocus>
+            </p>
+
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"
+                       placeholder="name@example.com" required>
+            </p>
+
+            <!-- phone must start with 05 and have 10 digits -->
+            <p>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone"
+                       placeholder="05XXXXXXXX" pattern="05[0-9]{8}" required>
+            </p>
+
+            <p>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </p>
+
+            <p>
+                <label for="city">City:</label>
+                <select id="city" name="city">
+                    <option value="jeddah">Jeddah</option>
+                    <option value="riyadh">Riyadh</option>
+                    <option value="makkah">Makkah</option>
+                    <option value="dammam">Dammam</option>
+                </select>
+            </p>
+
+            <!-- radio buttons have the same name so the user can pick only one -->
+            <p>
+                Account Type:
+                <input type="radio" id="individual" name="accounttype"
+                       value="individual" checked>
+                <label for="individual">Individual</label>
+
+                <input type="radio" id="company" name="accounttype" value="company">
+                <label for="company">Company</label>
+            </p>
+
+            <!-- user must tick this before sign up. "rental terms" opens policy.html -->
+            <p>
+                <input type="checkbox" id="terms" name="terms" value="agree" required>
+                <label for="terms">I agree to the <a href="policy.html">rental terms</a></label>
+            </p>
+
+            <!-- btn is our button class from style.css -->
+            <p>
+                <input type="submit" value="Sign Up" class="btn">
+                <input type="reset" value="Clear" class="btn">
+            </p>
+        </form>
+
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </section>
+
+    <!-- footer: same on every page -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Uddah. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

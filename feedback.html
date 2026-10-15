@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Share your feedback about Uddah tool rental">
+    <meta name="keywords" content="Uddah, feedback, review, tool rental">
+    <title>Uddah - Feedback</title>
+
+    <!-- main css file, same one for all pages -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- header: same on every page. the whole logo is an image map that opens the About page -->
+    <header class="site-header">
+        <img src="images/logo.png" alt="Uddah logo" width="250" height="150" usemap="#uddah-map">
+
+        <map name="uddah-map">
+            <area shape="rect" coords="0,0,250,150" href="about.html" alt="About Uddah">
+        </map>
+    </header>
+
+    <!-- menu: same on every page. "More" opens a drop-down with Contact, Feedback and Policy -->
+    <nav class="main-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+            <li>
+                <a href="#">More &#9662;</a>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="policy.html">Policy</a></li>
+                </ul>
+            </li>
+
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <!-- page content starts here -->
+    <section id="content" class="content">
+        <h2>Share Your Feedback</h2>
+        <p>Your opinion helps us improve Uddah. Tell us about your rental experience.</p>
+
+        <!-- feedback form. form-box gives it the white card style (same as the other forms) -->
+        <form method="post" action="#" class="form-box">
+
+            <p>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" size="30" maxlength="50" required autofocus>
+            </p>
+
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="name@example.com" required>
+            </p>
+
+            <!-- same products we have in products.html -->
+            <p>
+                <label for="equipment">Equipment Rented:</label>
+                <select id="equipment" name="equipment">
+                    <option value="impact-drill">Cordless Impact Drill Kit</option>
+                    <option value="rotary-hammer">Rotary Hammer Drill</option>
+                    <option value="tool-set">Mechanic &amp; Handyman Tool Set</option>
+                    <option value="ladder">Aluminum Step Ladder</option>
+                </select>
+            </p>
+
+            <!-- type date shows a calendar to pick the day -->
+            <p>
+                <label for="rentdate">Rental Date:</label>
+                <input type="date" id="rentdate" name="rentdate">
+            </p>
+
+            <!-- radio buttons have the same name so the user can pick only one rating -->
+            <p>
+                Overall Rating:
+                <input type="radio" id="excellent" name="rating" value="5" checked>
+                <label for="excellent">Excellent</label>
+
+                <input type="radio" id="good" name="rating" value="4">
+                <label for="good">Good</label>
+
+                <input type="radio" id="average" name="rating" value="3">
+                <label for="average">Average</label>
+
+                <input type="radio" id="poor" name="rating" value="2">
+                <label for="poor">Poor</label>
+            </p>
+
+            <!-- checkboxes: the user can pick more than one -->
+            <p>
+                What did you like?
+                <input type="checkbox" id="price" name="liked" value="price">
+                <label for="price">Price</label>
+
+                <input type="checkbox" id="quality" name="liked" value="quality">
+                <label for="quality">Tool Quality</label>
+
+                <input type="checkbox" id="service" name="liked" value="service">
+                <label for="service">Customer Service</label>
+            </p>
+
+            <!-- number input only accepts 1 to 10 -->
+            <p>
+                <label for="score">How likely are you to recommend us? (1-10):</label>
+                <input type="number" id="score" name="score" min="1" max="10" step="1" value="10">
+            </p>
+
+            <!-- label and textarea in two p tags, so the box goes under the word -->
+            <p><label for="comments">Comments:</label></p>
+            <p>
+                <textarea id="comments" name="comments" rows="6" cols="50"
+                    placeholder="Write your comments here..."></textarea>
+            </p>
+
+            <!-- btn is our button class from style.css -->
+            <p>
+                <input type="submit" value="Send Feedback" class="btn">
+                <input type="reset" value="Clear" class="btn">
+            </p>
+        </form>
+    </section>
+
+    <!-- footer: same on every page -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Uddah. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

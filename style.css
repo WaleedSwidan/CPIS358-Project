@@ -1,0 +1,198 @@
+/* main css file for all Uddah pages
+   colors we use: orange #e8711a, dark #2b2b2b, light orange #fde3cf */
+
+/* whole page */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333333;
+}
+
+/* header with the logo (same on all pages) */
+.site-header {
+    background-color: #2b2b2b;
+    text-align: center;
+    padding: 10px;
+}
+
+/* top menu (same on all pages) */
+.main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 12px;
+    text-align: center;
+    background-color: #e8711a;
+}
+
+/* inline = menu items next to each other.
+   relative is needed so the drop-down opens right under "More" */
+.main-menu li {
+    display: inline;
+    margin: 0 15px;
+    position: relative;
+}
+
+.main-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-menu a:hover {
+    color: #2b2b2b;
+}
+
+/* drop-down under "More": hidden at first (display none) */
+.main-menu li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 10em;
+    padding: 0;
+    background-color: white;
+    border: 2px solid #e8711a;
+    z-index: 10;               /* so it shows on top of the page content */
+}
+
+/* when the mouse is on "More", the drop-down shows */
+.main-menu li:hover ul {
+    display: block;
+}
+
+/* drop-down items one under the other */
+.main-menu li ul li {
+    display: block;
+    margin: 0;
+    border-top: 1px solid #e8711a;
+}
+
+.main-menu li ul a {
+    display: block;
+    padding: 8px;
+    color: #2b2b2b;
+}
+
+.main-menu li ul li:hover {
+    background-color: #fde3cf;
+}
+
+/* space around the content of each page */
+.content {
+    padding: 20px;
+}
+
+/* product cards in products.html (white box with shadow) */
+.product-card {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px #aaaaaa;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 70%;
+    height: 150px;             /* same height as the images */
+}
+
+/* image goes left and the text goes next to it (float).
+   fixed width so all the texts start from the same line */
+.product-image {
+    float: left;
+    position: relative;
+    margin-right: 15px;
+    width: 150px;
+}
+
+/* layering: image is under (z-index 1), badge is on top (z-index 2) */
+.product-image img {
+    position: relative;
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 2;
+    background-color: #e8711a;
+    color: white;
+    font-size: 10pt;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.price {
+    color: #e8711a;
+    font-weight: bold;
+}
+
+/* table style. used in products, policy and about pages */
+.price-table {
+    width: 70%;
+    background-color: white;
+    border: 2px solid #2b2b2b;
+}
+
+.price-table th, .price-table td {
+    border: 1px solid #cccccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.price-table th {
+    background-color: #e8711a;
+    color: white;
+}
+
+.price-table caption {
+    font-weight: bold;
+    padding: 8px;
+}
+
+/* forms (login, sign up, contact, feedback). add class="form-box" to the form tag */
+.form-box {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px #aaaaaa;
+    padding: 20px;
+    width: 50%;
+}
+
+.form-box input, .form-box select, .form-box textarea {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* the field you are typing in gets light orange */
+.form-box input:focus, .form-box textarea:focus {
+    background-color: #fde3cf;
+}
+
+/* orange button. general class, works on any tag (we use it on input and a) */
+.btn {
+    background-color: #e8711a;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #2b2b2b;
+}
+
+/* footer (same on all pages) */
+.site-footer {
+    background-color: #2b2b2b;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
