@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Search";
+}
+
+<!-- search form: sends the word to ShowSearchFormResult in ToolsController -->
+<section id="content" class="content">
+    <h2>Search for a Tool</h2>
+    <p>Type a tool name or a category, for example: Drill, Ladder or Power Tools.</p>
+
+    <form asp-action="ShowSearchFormResult" class="form-box">
+        <p>
+            <label for="SearchTool">Tool name or category:</label>
+            <input type="text" id="SearchTool" name="SearchTool" required>
+        </p>
+        <p>
+            <input type="submit" value="Search" class="btn">
+        </p>
+    </form>
+
+    <p><a asp-action="Index">Back to List</a></p>
+</section>

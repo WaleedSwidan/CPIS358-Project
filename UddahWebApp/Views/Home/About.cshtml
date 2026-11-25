@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "About Us";
+}
+
+<section id="content" class="content">
+
+    <!-- short intro about the project idea -->
+    <article id="who">
+        <header>
+            <h2>About Uddah</h2>
+        </header>
+        <p>
+            Uddah is a student project that offers a simple idea: rent the tool
+            you need by the day instead of buying it. Our goal is to help people
+            finish their home jobs easily while saving money and space.
+        </p>
+    </article>
+
+    <!-- links that jump to the sections below (they use the section id) -->
+    <p>
+        Jump to:
+        <a href="#vision">Vision &amp; Mission</a> |
+        <a href="#values">Our Values</a>
+    </p>
+
+    <section id="vision">
+        <h3>Our Vision</h3>
+        <p>To make useful tools available to everyone, whenever they need them.</p>
+
+        <h3>Our Mission</h3>
+        <p>
+            To provide quality, checked tools at a fair daily price, with clear
+            rental terms and friendly service.
+        </p>
+    </section>
+
+    <section id="values">
+        <h3>Our Values</h3>
+        <ul>
+            <li><strong>Saving:</strong> pay only for what you use.</li>
+            <li><strong>Quality:</strong> every tool is checked before each rental.</li>
+            <li>
+                <strong>Trust:</strong> clear terms explained in our
+                <a asp-controller="Home" asp-action="Policy">rental policy</a>.
+            </li>
+            <li><strong>Sustainability:</strong> sharing tools means less waste.</li>
+        </ul>
+    </section>
+
+    <!-- btn is the same class we used for the form buttons, here it's on a link -->
+    <p>Have a question? <a asp-controller="Home" asp-action="Contact" class="btn">Contact Us</a></p>
+
+    <p><a href="#content">Back to top</a></p>
+</section>

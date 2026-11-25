@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title format for all pages: Uddah - page name -->
+    <title>Uddah - @ViewData["Title"]</title>
+    <script type="importmap"></script>
+    <!-- bootstrap is kept because the Login and Register pages use it -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/UddahWebApp.styles.css" asp-append-version="true" />
+    <!-- our css file, loaded last so it wins over bootstrap -->
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
+</head>
+<body>
+    <header class="site-header">
+        <img src="~/images/logo.png" alt="Uddah logo" width="250" height="150" usemap="#uddah-map">
+        <map name="uddah-map">
+            <area shape="rect" coords="0,0,250,150" href="@Url.Action("About", "Home")" alt="About Uddah">
+        </map>
+    </header>
+
+    <nav class="main-menu">
+        <ul>
+            <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="Products">Products</a></li>
+            <!-- tools page from the database (ToolsController, Index method) -->
+            <li><a asp-area="" asp-controller="Tools" asp-action="Index">Tools</a></li>
+            <!-- search page for the tools (ToolsController, SearchForm method) -->
+            <li><a asp-area="" asp-controller="Tools" asp-action="SearchForm">Search</a></li>
+            <!-- account page: shows the cookies and the session values (AccountController) -->
+            <li><a asp-area="" asp-controller="Account" asp-action="Index">Account</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="About">About Us</a></li>
+            <li>
+                <a href="#">More &#9662;</a>
+                <ul>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Feedback">Feedback</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Policy">Policy</a></li>
+                </ul>
+            </li>
+            <!-- show the user name and logout if logged in, if not show login and sign up -->
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li><a href="/Identity/Account/Manage">Hello @User.Identity.Name</a></li>
+                <li><a href="/Identity/Account/Logout">Logout</a></li>
+            }
+            else
+            {
+                <li><a href="/Identity/Account/Login">Login</a></li>
+                <li><a href="/Identity/Account/Register">Sign Up</a></li>
+            }
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Uddah. All rights reserved.</p>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="~/js/script.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

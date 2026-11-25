@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Account";
+    var cookies = Context.Request.Cookies;
+}
+
+<section id="content" class="content">
+    <h2>Account Information</h2>
+
+    <!-- cookie values: saved in the user's browser -->
+    <div class="form-box">
+        <h3>Cookie Values</h3>
+        <ul>
+            @foreach (var c in cookies)
+            {
+                <li>@c.Key : @c.Value</li>
+            }
+        </ul>
+    </div>
+
+    <!-- session values: saved on the server -->
+    <div class="form-box">
+        <h3>Session Values</h3>
+        <ul>
+            <li>Session id : @ViewBag.sessionId</li>
+            <li>User name : @ViewBag.sessionUserName</li>
+        </ul>
+    </div>
+
+    <p><a href="@Url.Action("Index", "Home")" class="btn">Back to Home</a></p>
+</section>

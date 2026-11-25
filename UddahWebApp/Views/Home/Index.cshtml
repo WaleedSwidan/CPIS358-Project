@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- page content starts here (header, menu and footer come from _Layout.cshtml) -->
+<section id="content" class="content">
+
+    <!-- intro: explains the idea of Uddah -->
+    <article id="intro">
+        <header>
+            <h2>Welcome to Uddah</h2>
+        </header>
+
+        <!-- greeting changes with the time of day (filled by the script below) -->
+        <p id="greeting"></p>
+
+        <!-- embedded javascript: shows a greeting based on the current hour -->
+        <script type="text/javascript">
+            var now = new Date();          // current date and time
+            var hour = now.getHours();     // current hour (0-23)
+            var greeting;                  // the text we will show
+
+            if (hour < 12) {
+                greeting = "Good Morning! Ready for your next project?";
+            }
+            else if (hour < 18) {
+                greeting = "Good Afternoon! Find the tool you need today.";
+            }
+            else {
+                greeting = "Good Evening! Rent today, return tomorrow.";
+            }
+
+            // change the text and the color of the greeting paragraph
+            document.getElementById("greeting").innerHTML = greeting;
+            document.getElementById("greeting").style.color = "#e8711a";
+        </script>
+
+        <p>
+            Uddah is a daily tool and equipment rental website. Instead of buying
+            an expensive tool that you will only use once or twice, you can rent it
+            from Uddah for the days you need and return it when you finish.
+        </p>
+
+        <!-- btn here is on a link, we also use it on the form buttons -->
+        <p><a asp-controller="Home" asp-action="Products" class="btn">Browse Products</a></p>
+    </article>
+
+    <!-- links that jump to the sections below (they use the section id) -->
+    <p>
+        Jump to:
+        <a href="#problem">The Problem</a> |
+        <a href="#solution">Our Solution</a> |
+        <a href="#how">How It Works</a> |
+        <a href="#why">Why Uddah</a>
+    </p>
+
+    <section id="problem">
+        <h3>The Problem</h3>
+        <p>
+            Many people need a tool for a small job, such as installing a shelf or
+            fixing something at home. Buying a new tool costs a lot of money, takes
+            space to store, and is rarely used again.
+        </p>
+    </section>
+
+    <section id="solution">
+        <h3>Our Solution</h3>
+        <p>
+            Uddah lets you rent the tool you need by the day, at a low price.
+            You save money and storage space, and you always get a tool that is
+            checked and ready to use.
+        </p>
+
+        <!-- image with a caption under it -->
+        <p>
+            <img src="~/images/impact-drill.jpeg" alt="Cordless impact drill" width="150" height="150">
+        </p>
+        <p><em>Rent a cordless drill for only 30 SAR per day.</em></p>
+    </section>
+
+    <!-- rental steps as a numbered list -->
+    <section id="how">
+        <h3>How It Works</h3>
+        <ol>
+            <li><a href="/Identity/Account/Register">Create an account</a> on Uddah.</li>
+            <li>Choose the tool you need from our <a asp-controller="Home" asp-action="Products">products</a>.</li>
+            <li>Pick up the tool and use it for the days you need.</li>
+            <li>Return the tool and get your deposit back.</li>
+        </ol>
+    </section>
+
+    <section id="why">
+        <h3>Why Uddah?</h3>
+        <ul>
+            <li><strong>Save money:</strong> pay only for the days you use.</li>
+            <li><strong>No storage:</strong> no need to keep big tools at home.</li>
+            <li><strong>Quality tools:</strong> every tool is checked before rental.</li>
+            <li><strong>Clear terms:</strong> read our <a asp-controller="Home" asp-action="Policy">rental policy</a>.</li>
+        </ul>
+    </section>
+
+    <!-- small extra info -->
+    <p><strong>Did you know?</strong> Most home tools are used only a few times a year.</p>
+
+    <p><a href="#content">Back to top</a></p>
+</section>
